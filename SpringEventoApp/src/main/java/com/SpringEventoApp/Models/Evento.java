@@ -10,16 +10,16 @@ import javax.persistence.Id;
 @Entity
 public class Evento implements Serializable{
 
-	private static final long serialVersionUID = 1L;
-	public long getCodigo() {
+	private static final int serialVersionUID = 1;
+	public int getCodigo() {
 		return codigo;
 	}
 	public void setCodigo(long codigo) {
-		this.codigo = codigo;
+		this.codigo = (int) codigo;
 	}
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private long codigo;
+	private int codigo;
 	private String nome;
 	private String local;
 	private String data;
